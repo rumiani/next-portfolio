@@ -1,0 +1,125 @@
+.project{
+    width: 30%;
+    height: 500px;
+    margin: 20px 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+    list-style-type: none;
+    opacity: 0.4;
+}
+.project:hover{
+    /* box-shadow: 2px 2px 3px black; */
+    opacity: 1;
+}
+.picDiv{
+    position: relative;
+}
+.projectPic{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    
+}
+.projectName{
+    background-color: rgb(91, 91, 235);
+    padding:5px 10px;
+    border-radius: 0 10px 0 0 ;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    /* z-index: 2; */
+}
+.projectsInfo{
+    /* width: 90%; */
+    padding: 10px;
+    height: 40%;
+    /* background-color: tomato; */
+    position: relative;
+}
+.projectText{
+    height: 50%;
+    text-align:justify;
+    /* background-color: rosybrown; */
+    /* height: 100px; */
+    overflow-y: auto;
+}
+.infoLinks {
+    /* height: 40px; */
+    width: 50%;
+    /* background-color: turquoise; */
+    display: flex;
+    justify-content: space-between;
+    /* position:absolute; */
+    /* bottom: 0; */
+    margin: 0 auto;
+}
+.infoLinks i {
+    font-size: 35px;
+    width: 50%;
+}
+.infoLinks i:hover{
+    cursor: pointer;
+    color: rgb(100, 255, 218);
+}
+.infoLinks a{
+    text-decoration: none;
+    position: relative;
+    /* background-color: red; */
+}
+.infoLinks span{
+    display: none;
+    position: absolute;
+    /* top: 10; */
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    border: 1px solid black;
+    font-size: 12px;
+    width: 100px;
+    padding: 5px 0;
+    bottom: 105%;
+    left: 20px;
+    text-align: center;
+}
+.infoLinks>  a:hover span{
+    display: inline;
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .project{
+        width: 40%;
+        height: 500px;
+        margin: 20px auto;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px black;
+        list-style-type: none;
+        
+    }
+    .projectPic{
+        width: 100%;
+        height: 300px;
+        border-radius: 10px 10px 0 0;
+        
+    }
+  }
+
+@media screen and (max-width: 768px) {
+.project{
+    width: 100%;
+    height: 500px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px black;
+    list-style-type: none;
+    
+}
+.projectPic{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    
+}
+.infoLinks{
+    /* bottom: -30px; */
+    /* position: absolute; */
+}
+}

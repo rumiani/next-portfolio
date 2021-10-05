@@ -1,0 +1,10 @@
+.projects{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: red; */
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 auto;
+        
+}
