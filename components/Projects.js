@@ -1,42 +1,35 @@
 import Project from "./Project";
 import classes from '../styles/Projects.module.css'
-const ProjectsArr = [
-    {
-        name:'Simon',
-        img:'assets/simon.png',
-        link:'https://rumiani.github.io/my-simon-react/',
-        srcCode:'https://github.com/rumiani/my-simon-react',
-        text:'I used React & firebase to build a Full Stack memory game with sign up form and real time database.'
-    },
-    {   
-        name:'Dictionary',
-        img:'assets/dictionary.gif',
-        link:'https://rumiani.github.io/dictionary/',
-        srcCode:'https://github.com/rumiani/dictionary',
-        text:'A dictionary built with owlbot.info API using TypeScript and React.'
-    },
-    {   
-        name:'Next landing',
-        img:'assets/next.png',
-        link:'https://rumiani.github.io/landing_next/',
-        srcCode:'https://github.com/rumiani/landing_next',
-        text:'A landing page with Next.js.'
-    },]
+import { useRouter } from "next/dist/client/router";
+import { fa } from "../public/locals/fa";
+import { en } from "../public/locals/en";
+import { ProjectsArr } from "./projectsArr";
+
 const Projects = () => {
+    const router = useRouter();
+    const {locale} = router
+    let t = locale === 'en'?en:fa
     return ( 
-        <div className={classes.projects}>
-            {
-                ProjectsArr.map((project,index)=>{
-                    return <Project
-                    name={project.name}
-                    img={project.img}
-                    srcCode={project.srcCode}
-                    text={project.text}
-                    link={project.link}
-                    key={index}
+        <div className={classes.container} >
+                <h2 className={classes.projectsTitle} id='portfolio'>{t.myProjects}</h2>
+            <div className={classes.projects}>
+                <br />
+                {
+                    ProjectsArr.map((project,index)=>{
+                        return <Project
+                        name={locale === 'en'?project.nameEn:project.nameFa}
+                        png={project.png}
+                        gif={project.gif}
+                        srcCode={project.srcCode}
+                        text={locale === 'en'?project.textEn:project.textFa}
+                        link={project.link}
+                        key={index}
+                        id={project.id}
                         />
-                })
-            }
+                    })
+                }
+            </div>
+                {/* <h2 className={classes.seeMore}>See more</h2> */}
         </div>
      );
 }

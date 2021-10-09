@@ -1,7 +1,14 @@
 import classes from '../../../styles/Rocket.module.css';
-import {useState, useEffect, useRef} from "react"
+import { useEffect, useRef} from "react"
+import Image from 'next/image'
+import { useRouter } from 'next/dist/client/router';
+import { fa } from '../../../public/locals/fa';
+import { en } from '../../../public/locals/en';
 const Rocket = () => {
-    // const [audio, setAudio] = useState(null)
+    const router = useRouter();
+    const {locale} = router
+    let t = locale === 'en'?en:fa
+
     const player = useRef()
     // console.log(player);
     let audio;
@@ -12,8 +19,6 @@ const Rocket = () => {
     })
     let rocket = useRef()
     const launchHandler = ()=>{
-        console.log(rocket.current);
-        console.log(classes.rocket);
         rocket.current.classList.remove(`${classes.rocket}`)
         rocket.current.classList.add(`${classes.fly}`)
         audio.play()
@@ -25,9 +30,14 @@ const Rocket = () => {
     }
 
     return ( 
+        <div className={classes.pad}>
             <img ref={rocket} className={classes.rocket}
-             onClick={launchHandler} src="https://twemoji.maxcdn.com/2/72x72/1f680.png"
-              alt="Space Ship" title='Click me to fly' />
+            //  src="/assets/rocket.png"
+             src="https://twemoji.maxcdn.com/2/72x72/1f680.png"
+                width='50px'
+             height= '50px'
+             alt="Space Ship" onClick={launchHandler}  title={t.launch} />
+        </div>
      );
 }
  

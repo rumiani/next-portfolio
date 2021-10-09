@@ -1,22 +1,41 @@
-import React from 'react';
+import { useRouter } from 'next/dist/client/router';
+import { useState } from 'react';
+import { en } from '../public/locals/en';
+import { fa } from '../public/locals/fa';
 import classes from '../styles/Project.module.css';
+import Image from 'next/image'
 const Project = (props) => {
+    const [play, setplay] = useState(false)
+    const router = useRouter();
+    const {locale} = router
+    let t = locale === 'en'?en:fa
+
     return ( 
             <div className={classes.project} >
-                    <div className={classes.picDiv}>
-                        <img src={props.img} alt="project_pic" className={classes.projectPic} />
-                        <span className={classes.projectName}>{props.name}</span>
+                    <div className={classes.picDiv} onClick = {()=>setplay(!play)}>
+                        <Image src={play?props.gif:props.png}
+                            alt='Project pic' width='350' height='300px'
+                            className={`${classes.projectPic} ${play?classes.show:classes.hide}`}
+                            title={t.playDemo}
+                            id={props.id}
+                        />
+                        <span className={classes.paly}>
+                            {play?<i className="far fa-pause-circle"></i>:
+                                <i className="fas fa-play-circle"  title='Play'></i>
+                            }
+                        </span>
+                        <span className={classes.projectName} style={{left:locale === 'en'?0:'unset',right:locale === 'fa'?0:'unset'}}>{props.name}</span>
                     </div>
                     <div className={classes.projectsInfo}>
                         <p className={classes.projectText} >{props.text}</p>
                         <div className={classes.infoLinks}>
-                            <a href={props.srcCode} target='_blank'>
+                            <a href={props.srcCode} target='_blank' rel="noreferrer">
                                 <i className="fab fa-github"></i> 
-                                <span>open the src code</span>
+                                <span>{t.openSrc}</span>
                             </a>
-                            <a href={props.link} target='_blank'>
-                                <i class="fas fa-external-link-alt"/>
-                                <span>open the app</span>
+                            <a href={props.link} target='_blank' rel="noreferrer">
+                                <i className="fas fa-external-link-alt"/>
+                                <span>{t.openApp}</span>
                             </a>
                         </div>
                     </div>

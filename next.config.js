@@ -1,8 +1,11 @@
 module.exports = {
-  reactStrictMode: true,
-  i18n:{
-    locales: ['en','fa'],
-    defaultLocale: 'en'
-  }
+  i18n: {
+    locales: ["en", "fa"],
+    defaultLocale: "en"
+  },
+};
+module.exports = {
+  images: {
+    domains: ['twemoji.maxcdn.com']
+  },
 }
-

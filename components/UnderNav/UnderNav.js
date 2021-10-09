@@ -1,62 +1,63 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import classes from '../../styles/UnderNav.module.css'
 import Rocket from './Rocket/Rocket';
-import React, { Component }  from 'react';
-// const email = 'https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=maziar9170@gmail.com'
+// import t from '../Navbar/Navbar'
+import { useRouter } from 'next/dist/client/router';
+import { en } from '../../public/locals/en';
+import { fa } from '../../public/locals/fa';
 
+// const email = 'https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=maziar9170@gmail.com'
 const UnderNav = () => {
+    const router = useRouter();
+    const {locale} = router
+    let t = locale === 'en'?en:fa
+
     useEffect(()=>{
         let getElement = document.querySelector(`.${classes.whoIAm}`)
-        let fullText = `Hi,<br> my name is <strong>Maziar Rumiani</strong>.<br>
-                        I am a passionate Front End web developer.`
+        // let fullText = t.myNameIs
         let currentText = ``
         let i = 0;
         let interval = setInterval(()=>{
-            currentText = currentText + fullText[i];
+            currentText = currentText + t.myNameIs[i];
             getElement.innerHTML = currentText+'_';
             i++;
-            if (i >= fullText.length){        
-                getElement.innerHTML = currentText;
+            if (i >= t.myNameIs.length){        
                 clearInterval(interval);
+                return getElement.innerHTML = t.myNameIs;
             }
         }, 50);         
     },[])
+
+const whoIAmText = useRef()
+if(whoIAmText.current)whoIAmText.current.innerHTML = t.myNameIs
     
     return ( 
         <div className={classes.container} id='#/top'
         style={{backgroundImage: `url(./assets/pic-2.jpg)`}}>
-                    <p className={classes.whoIAm}></p>
                 <div className={classes.intruduce}>
-                    <p>I am a motivated self taught programmer who loves learning and facing new challenges. 
-                        I'm fluent in English so I don't have any problem learning new things. 
-                        Now, I'd like to work in a team to learn more and gain experience. 
-                        I'm open to work if your company has a position for me.                    
+                    <div >
+                        <p className={classes.whoIAm} ref={whoIAmText}
+                        style={{textAlign:locale==='en'?'left':'right'}}
+                        >
+                        </p>
+                    </div>
+                    <p>{t.whoIAm}                   
                         
                     </p>
-                <a className={classes.contactMe}href='#contact'> 
-                    Get In Touch
-                </a>
+                    <a className={classes.contactMe}href='#contact'> 
+                        {t.getInTouch}
+                    </a>
                 </div>
                 <div className={classes.about}>
 
-                   <p><strong>ABOUT ME: </strong>
-                        I used to work in a web hosting company but,
-                        last year because of my passion for programming I chose to change my 
-                        career then I started to take some courses from Coursera and FreeCodeCamp
-                        Here are few technologies I've been working with recently: <br />
-                       <ul>
-                           <li>React.js & Redux</li>
-                           <li>Next.js</li>
-                           <li>JavaScript (ES6+)</li>
-                           <li>TypeScript</li>
-                           <li>Git & GitHub </li>
-                           <li>CSS</li>
-                           <li>HTML</li>
-                           <li>WordPress</li>
-                       </ul>
-
+                   <p>{t.aboutMe} <br />
                     </p>
-                    <img id={classes.myPic} src="./assets/rumi.png" alt="Maziar Rumiani" />
+                    <ul>
+                    {t.skills.map((skill,index)=>{
+                        return <li key={index}>{skill}</li>
+                    })}
+                    </ul>
+
                 </div>
                 <Rocket/>
         </div>

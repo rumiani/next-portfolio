@@ -1,12 +1,15 @@
 .navbar {
     background-color: black;
-    height: 12vh;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
     position: relative;
+    direction: ltr !important;
+    /* width: 100%; */
+    z-index: 50;
 }
 
   .logo {
@@ -18,7 +21,7 @@
     font-size: 2rem;
     display: flex;
     align-items: center;
-  }
+}
 .logo:hover{
     color: rgb(100, 255, 218);
 }
@@ -29,71 +32,78 @@
     position: absolute;
     left: 50px;
     margin:0 10px;
+    /* width: 80px; */
+    /* height: 20px; */
+    transition: 1s;
+    padding: 10px;
+    font-size: 26px;
+    /* width: 100px; */
+    height: 50px;
+    /* background-color: blue; */
 }
 .lang:hover{
     cursor: pointer;
+    box-shadow: 2px 2px 2px 2px rgb(100, 255, 218);
+    transform: scale(1.1);
 }
-  .menu {
+.lang>img{
+    height: 15px;
+    width: 30px;
+}
+.menu {
     display: flex;
     list-style: none;
     text-align: center;
     width: 100vw;
-    justify-content: end;
-    margin-right: 10px;
-  }
+    justify-content: flex-end;
+}
 .menu li {
     color: #fff;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    margin: 0 10px;
+    transition: 1s ;
 }
 .menu li:hover {
     cursor: pointer;
-    transition: all 0.2s ease-out;
-    box-shadow: 2px 2px 2px rgb(100, 255, 218);
+    box-shadow: 2px 2px 2px 2px rgb(100, 255, 218);
+    transform: scale(1.1);
 }  
 .menuIcon {
     display: none;   
 }
 
-@media screen and (max-width: 960px) {
-    .lang {
-        /* display: flex; */
-        /* position: absolute; */
-        /* margin:0 auto; */
-    }
+@media screen and (max-width: 760px) {
     .menu {
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: flex-start;
         width: 100%;
+        height: 88vh;
         position: absolute;
         top: 80px;
-        left: -100%;
-        transition: all 0.5s ease;
-        /* background: #242222; */
-        height: 88vh;
-        margin-top: -6px;
-        background-color: black;
-        z-index: 10;
+        top: -700%;
+        transition: all 2s ease;
+        margin-top: 0;
+        background-color: transparent;
     }
-    
     .menu.active {
-        height: 88vh;
-        left: 0;
-        /* opacity: 1; */
-        transition: all 0.5s ease;
-        z-index: 4;
+        top: 80px;
+        background-color: rgba(0, 0, 0, 0.938);
     }
 
     .menu li {
         text-align: center;
-        padding: 2rem;
+        padding: 2rem 0;
         width: 100%;
         display: table;
         /* background-color: wheat; */
         margin-left: -20px;
+    }
+    .menu li:hover{
+        transform: scale(1);
     }
 
     .menuIcon {

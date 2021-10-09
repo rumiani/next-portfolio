@@ -1,25 +1,26 @@
+
 .rocket{
-    /* background-color: red; */
-      width: 50px;
-      height: 50px;
-      position: absolute;
-      cursor: pointer;
-      z-index: 3;
-      top: 400px;
-      left:20vw;
-      animation-duration: 4s;
-      animation:  slide-right 3s;
-      color:red;
-    }
+    /* background-color: blue; */
+    position: absolute;
+    cursor: pointer;
+    z-index: 3;
+    top: 90vh;
+    left:10vw;
+    animation-duration: 6s;
+    animation:  slide-right 3s;
+}
   
     @keyframes slide-right {
       from {
-        left: 0;
+        left: 100vw;
       }
       to {
-        left: 20vw;
+        left: 10vw;
       }
     }
+.rocket:hover{
+  /* left :50px; */
+}
 .fly {
   width: 50px;
   height: 50px;
@@ -31,11 +32,11 @@
   z-index: 5;
 }
     @keyframes imgAnimation {
-      0%   {left:20vw; top:400px;}
-      100%  {left:80%; top:-10px;width: 5px;height: 5px; opacity: 0.3;}
+      0%   {left:10vw; top:90vh;}
+      100%  {left:95vw; top:-10px;width: 5px;height: 5px; opacity: 0.3;}
     }
     @media screen and (max-width: 768px) {
       .rocket {
-        display: none;
+        /* display: none; */
       }
     }

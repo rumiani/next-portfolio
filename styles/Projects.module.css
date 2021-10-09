@@ -1,10 +1,37 @@
+.container{
+    background-color: rgb(255, 250, 245);
+    padding: 50px 0;
+
+}
+.projectsTitle{
+    margin: 20px auto;
+    width: fit-content;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 2px 3px 2px blue;
+    border-radius: 0 0 10px 10px;
+    
+}
+.seeMore{
+    width: 200px;
+    padding: 20px;
+    box-shadow: 2px 3px 2px blue;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    margin: 10px auto;
+    transition: 1s;
+}
+.seeMore:hover{
+    box-shadow: 2px 3px 2px rgb(43, 139, 117);
+    transform: scale(1.1);
+    cursor: pointer;
+}
 .projects{
-    width: 80vw;
+    width: 88vw;
     display: flex;
     flex-wrap: wrap;
     /* background-color: red; */
-    justify-content: space-between;
-    align-content: center;
+    justify-content:center;
     margin: 0 auto;
-        
+    /* align-content: center; */
 }

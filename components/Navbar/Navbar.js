@@ -1,64 +1,66 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import React  from 'react';
 import classes from '../../styles/Navbar.module.css'
-import { Trans } from 'react-i18next';
-import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/dist/client/router';
-// import { Router } from 'next/dist/client/router';
+import { fa } from '../../public/locals/fa';
+import { en } from '../../public/locals/en';
+import Image from 'next/image'
 const Navbar = () => {
 const [menu, setMenu] = useState(false);
-const [changeLang,setChangeLang] =useState(false)
-const { t, i18n } = useTranslation();
-const router = useRouter()
-
-const {locale} = router
-
-// locale==='en'?setChangeLang(false):setChangeLang(true)
-
-const changeLanguage = () =>{
-    setChangeLang(!changeLang)
-    let language = changeLang?'fa':'en'
-    i18n.changeLanguage(language)
-}
 const mobileMenu = ()=>setMenu(!menu)
+
+const router = useRouter();
+const {locale} = router
+ const t = locale === 'en'?en:fa
+const changeLanguage = () =>{
+switch(locale){
+  case 'en' :
+      router.push('/','/',{locale:'fa'})
+    break;
+  case 'fa' :
+      router.push('/','/',{locale:'en'})
+    break;
+}
+}
+const refMenu = useRef()
+useEffect(() =>{
+    document.body.style.direction=locale === 'fa'?'rtl':'ltr'
+});
 
 
     return ( 
             <nav className={classes.navbar}>
                     <div className={classes.logo}>
-                        {/* Rumiani  */}
-                        <Trans i18nKey="description.lang">
-                        english {t('english')}
-                        </Trans>
                     </div>
-                    <div className={classes.lang}>
-                        <img  src={changeLang?'./assets/en.png':'./assets/ir.png'} 
-                            title={changeLang?'English':'فارسی'} alt="flag"
-                            onClick={changeLanguage} /> &nbsp;{changeLang?'En':'Fa'}
+                    <div className={classes.lang} onClick={changeLanguage}>
+                        <Image  src={locale ==='en'?fa.flag:en.flag} alt="flag" 
+                        height='40px' width='50px' title={locale ==='en'?fa.language:en.language} /> 
+                        &nbsp;{locale ==='en'?fa.lang:en.lang}
                     </div>
                     <div className={classes.menuIcon} onClick={mobileMenu}>
                         <i className={menu?'fas fa-times':'fas fa-bars'}></i>
                     </div>
-                    <ul className={menu?`${classes.menu} ${classes.active}`:`${classes.menu}`} onClick={mobileMenu} >
+                    <ul ref={refMenu} className={menu?`${classes.menu} ${classes.active}`:`${classes.menu}`} 
+                    onClick={mobileMenu} >
                         <li>
-                                <a to='/portfolio' onClick={()=> window.scrollTo(0, 0)} >
-                                    Home
-                                </a>
+                            <a to='/portfolio' onClick={()=> window.scrollTo(0, 0)} >
+                                {t.Home}
+                            </a>
                         </li>
                         <li>
-                                <a href='#contact'  >
-                                    Contact Me
-                                </a>
+                            <a href='#contact'  >
+                                {t.contactMe}
+                            </a>
                         </li>
                         <li>
-                                <a href='#portfolio'  >
-                                    Portfolio
-                                </a>
+                            <a href='#portfolio'  >
+                                {t.portfolio}
+                            </a>
                         </li>
                         <li>
-                                <a href='/assets/Maziar_Rumiani_Resume.pdf'  >
-                                Resume
-                                </a>
+                            <a href='/assets/Maziar_Rumiani_Resume.pdf'  >
+                                {t.resume}
+                            </a>
                         </li>
                     </ul>
             </nav>
