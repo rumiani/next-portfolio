@@ -35,12 +35,13 @@
     .social{
         display: flex;
         flex-direction: unset;
-        justify-content: space-around;
+        justify-content: space-between;
         position:static;
         margin: 0 auto;
         width: 90%;
-        /* background-color: violet; */        
-}
+        /* background-color: violet;         */
+        margin-right: 0;
+    }
 .social li{
     margin: 0;
     padding: 0;
