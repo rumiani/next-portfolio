@@ -1,7 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import '../i18n'
+// import { useRouter } from 'next/dist/client/router'
+// import './i18n';
+
 export default function Home() {
+// const {locale} = useRouter()
+// console.log(locale);
   return (
     <div className={styles.container}>
       <Head>

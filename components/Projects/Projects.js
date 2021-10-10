@@ -1,9 +1,10 @@
-import Project from "./Project";
-import classes from '../styles/Projects.module.css'
+import Project from "./Project/Project";
+import classes from '../../styles/Projects.module.css'
 import { useRouter } from "next/dist/client/router";
-import { fa } from "../public/locals/fa";
-import { en } from "../public/locals/en";
-import { ProjectsArr } from "./projectsArr";
+
+import { ProjectsArr } from "../ArrData/projectsArr";
+import { en } from "../../locals/en";
+import { fa } from "../../locals/fa";
 
 const Projects = () => {
     const router = useRouter();

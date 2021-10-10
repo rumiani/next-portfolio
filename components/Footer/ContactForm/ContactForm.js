@@ -1,6 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
-import { en } from '../../../public/locals/en';
-import { fa } from '../../../public/locals/fa';
+import { en } from '../../../locals/en';
+import { fa } from '../../../locals/fa';
+
 import classes from '../../../styles/ContactForm.module.css'
 const ContactForm = ()=> {
     const router = useRouter();

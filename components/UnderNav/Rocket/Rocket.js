@@ -2,8 +2,8 @@ import classes from '../../../styles/Rocket.module.css';
 import { useEffect, useRef} from "react"
 import Image from 'next/image'
 import { useRouter } from 'next/dist/client/router';
-import { fa } from '../../../public/locals/fa';
-import { en } from '../../../public/locals/en';
+import { en } from '../../../locals/en';
+import { fa } from '../../../locals/fa';
 const Rocket = () => {
     const router = useRouter();
     const {locale} = router

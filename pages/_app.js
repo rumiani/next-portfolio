@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import Projects from '../components/Projects'
+import Projects from '../components/Projects/Projects'
 import UnderNav from '../components/UnderNav/UnderNav'
 import '../styles/globals.css'
 

@@ -3,8 +3,9 @@ import classes from '../../styles/UnderNav.module.css'
 import Rocket from './Rocket/Rocket';
 // import t from '../Navbar/Navbar'
 import { useRouter } from 'next/dist/client/router';
-import { en } from '../../public/locals/en';
-import { fa } from '../../public/locals/fa';
+import { en } from '../../locals/en';
+import { fa } from '../../locals/fa';
+
 
 // const email = 'https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=maziar9170@gmail.com'
 const UnderNav = () => {

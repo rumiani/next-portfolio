@@ -1,7 +1,7 @@
 import { useRouter } from 'next/dist/client/router';
 import React  from 'react';
-import { en } from '../../../public/locals/en';
-import { fa } from '../../../public/locals/fa';
+import { en } from '../../../locals/en';
+import { fa } from '../../../locals/fa';
 import classes from '../../../styles/social.module.css';
 const SocialIcons = () => {
     const router = useRouter();

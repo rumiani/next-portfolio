@@ -65,6 +65,7 @@
     padding: 0.5rem 1rem;
     margin: 0 10px;
     transition: 1s ;
+    height: 70px;
 }
 .menu li:hover {
     cursor: pointer;

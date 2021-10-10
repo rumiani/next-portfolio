@@ -1,9 +1,9 @@
 import { useRouter } from 'next/dist/client/router';
 import { useState } from 'react';
-import { en } from '../public/locals/en';
-import { fa } from '../public/locals/fa';
-import classes from '../styles/Project.module.css';
+import classes from '../../../styles/Project.module.css';
 import Image from 'next/image'
+import { en } from '../../../locals/en';
+import { fa } from '../../../locals/fa';
 const Project = (props) => {
     const [play, setplay] = useState(false)
     const router = useRouter();

@@ -34,8 +34,6 @@
     color: rgb(100, 255, 218);
   }
 .contactMe {
-  /* margin: 12px auto; */
-  /* text-decoration: none; */
   box-shadow: 2px 3px 2px 2px black;
   border-radius: 5px;
   padding: 10px;
@@ -45,7 +43,7 @@
   text-align: center;
   transition: 1s;
   margin: 0 auto;
-  
+  width: fit-content;
 }
 .contactMe:hover{
   transform: scale(1.1);
