@@ -34,30 +34,50 @@
 @media screen and (max-width: 768px) {
     .social{
         display: flex;
-        flex-direction: unset;
+        flex-direction: row;
         justify-content: space-between;
         position:static;
-        margin: 0 auto;
         width: 90%;
         /* background-color: violet;         */
-        margin-right: 0;
+        margin:10px auto;
+        padding-right: -40px;
     }
-.social li{
-    margin: 0;
-    padding: 0;
-    width: 35px;
+    .social li{
+        /* margin: 0; */
+    /* width: 35px; */
+    padding-left: unset;
     /* background-color: wheat; */
 }
 .social li:hover {
-    padding-left: unset;
+    /* padding-left: unset; */
 }
 .social li i{
     font-size: 35px;
     color: rgb(100, 255, 218);
     transition: 1s;
+    width: 60px;
 }
 .social li i:hover{
     transform: scale(1.1);
 }
 
+}
+@media screen and (max-width: 350px) {
+    .social li i{
+        font-size: 70%;
+        color: rgb(100, 255, 218);
+        transition: 1s;
+        margin: unset;
+        padding: unset;
+        width: 40px;
+    }
+    .social li i:hover{
+        transform: unset;
+    }
+    .social{
+
+        margin: unset;
+        padding: unset;
+        right: 0;
+    }
 }

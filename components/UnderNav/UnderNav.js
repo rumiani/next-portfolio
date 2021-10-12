@@ -33,8 +33,7 @@ const whoIAmText = useRef()
 if(whoIAmText.current)whoIAmText.current.innerHTML = t.myNameIs
     
     return ( 
-        <div className={classes.container} id='#/top'
-        style={{backgroundImage: `url(./assets/pic-2.jpg)`}}>
+        <div className={classes.container} id='#/top'>
                 <div className={classes.intruduce}>
                     <div >
                         <p className={classes.whoIAm} ref={whoIAmText}

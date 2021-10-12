@@ -1,6 +1,6 @@
 export const en = {
     lang:'en',
-    language:'English',
+    language:'Translate to English',
     flag:'/assets/en.png',
     Home:'Home',
     contactMe:'Contact Me',
@@ -14,7 +14,7 @@ export const en = {
     myNameIs:`Hi,<br> my name is <strong>Maziar Rumiani</strong>.<br>
         I am a passionate Front End web developer.`,
     aboutMe:`ABOUT ME:
-        I used to work as a webmaster an tech support engineer in a web hosting company for 2+ years and now it has been
+        I used to work as a webmaster and a tech support engineer in a web hosting company for 2+ years and now it has been
         a year working as a Front End web developer.
         Here are few technologies I've been working with recently:`,
     skills:['React.js & Redux','Next.js','JavaScript (ES6+)','TypeScript','Git & GitHub','CSS3','HTML5'],

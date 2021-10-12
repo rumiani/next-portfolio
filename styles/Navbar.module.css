@@ -26,29 +26,24 @@
     color: rgb(100, 255, 218);
 }
 .lang{
-    /* background-color: red; */
     color: white;
     display: flex;
     position: absolute;
     left: 50px;
     margin:0 10px;
-    /* width: 80px; */
-    /* height: 20px; */
     transition: 1s;
-    padding: 10px;
-    font-size: 26px;
-    /* width: 100px; */
-    height: 50px;
-    /* background-color: blue; */
+    font-size: 20px;
+    padding: 2px;
+    /* background-color: turquoise; */
 }
 .lang:hover{
     cursor: pointer;
     box-shadow: 2px 2px 2px 2px rgb(100, 255, 218);
     transform: scale(1.1);
 }
-.lang>img{
-    height: 15px;
-    width: 30px;
+.flag{
+ width: 90px;
+
 }
 .menu {
     display: flex;
@@ -86,7 +81,7 @@
         position: absolute;
         top: 80px;
         top: -700%;
-        transition: all 2s ease;
+        transition: all 1s ease;
         margin-top: 0;
         background-color: transparent;
     }
@@ -119,6 +114,12 @@
     }
     .logo{
         display: none;
+    }
+    .lang{
+        left: 10px;
+        /* background-color: violet; */
+    }
+    .flag{
     }
 }
   

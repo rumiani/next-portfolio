@@ -1,12 +1,12 @@
 export const fa = {
     lang:'fa',
-    language:'فارسی',
+    language:'ترجمه به فارسی',
     flag:'/assets/ir.png',
     Home:'خانه',
     contactMe:'تماس با من',
     portfolio:'نمونه کارها',
     resume:'رزومه',
-    getInTouch:'اینجا بهم پیام بده',
+    getInTouch:'در تماس باش',
     whoIAm:'یک برنامه نویس با انگیزه و مسلط به زبان انگلیسی. در جستجوی عضویت در یک تیم برنامه نویسی قوی برای کسب تجربه بیشتر.',
     myNameIs:`سلام،
         من <strong>مازیار رومیانی</strong> هستم،

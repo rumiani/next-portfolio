@@ -103,11 +103,11 @@
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
     .project{
         margin: 20px auto;
         width: 95%;
-        height: 400px;
+        height: 80%;
     }
 }
 .show{
