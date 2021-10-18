@@ -19,6 +19,7 @@ export default function Home() {
       <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap"
         rel="stylesheet"
       />
+      <link rel='preload' />
       </Head>
     </div>
   )

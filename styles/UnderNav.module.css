@@ -4,9 +4,8 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    /* background-color: red; */
-    background:no-repeat;
-    background-image:url('/assets/pic-2.jpg');
+    background-color: rgba(0, 0, 0, 0.863);
+    background:url('/assets/pic-2.jpg') no-repeat;
   }
   
   .intruduce{

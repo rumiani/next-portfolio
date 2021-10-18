@@ -8,22 +8,8 @@
     position: sticky;
     position: relative;
     direction: ltr !important;
-    /* width: 100%; */
+    width: 100%;
     z-index: 50;
-}
-
-  .logo {
-    color: #fff;
-    left: 200px;
-    position: absolute;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-}
-.logo:hover{
-    color: rgb(100, 255, 218);
 }
 .lang{
     color: white;
@@ -34,7 +20,6 @@
     transition: 1s;
     font-size: 20px;
     padding: 2px;
-    /* background-color: turquoise; */
 }
 .lang:hover{
     cursor: pointer;
@@ -42,7 +27,7 @@
     transform: scale(1.1);
 }
 .flag{
- width: 90px;
+ /* width: 90px; */
 
 }
 .menu {
@@ -51,6 +36,7 @@
     text-align: center;
     width: 100vw;
     justify-content: flex-end;
+    /* background-color: blue; */
 }
 .menu li {
     color: #fff;
