@@ -35,12 +35,12 @@ if(whoIAmText.current)whoIAmText.current.innerHTML = t.myNameIs
     return ( 
         <div className={classes.container} id='#/top'>
                 <div className={classes.intruduce}>
-                    <div >
+                    {/* <div > */}
                         <p className={classes.whoIAm} ref={whoIAmText}
                         style={{textAlign:locale==='en'?'left':'right'}}
                         >
                         </p>
-                    </div>
+                    {/* </div> */}
                     <p>{t.whoIAm}                   
                         
                     </p>

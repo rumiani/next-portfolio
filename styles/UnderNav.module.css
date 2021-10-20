@@ -28,8 +28,7 @@
     text-align: left;
     font-size: 32px;
     color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+    font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
     margin-bottom: 20vh;
   }
   .whoIAm strong{
