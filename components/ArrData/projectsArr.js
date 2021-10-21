@@ -27,7 +27,7 @@ export const ProjectsArr = [
         nameFa:'پیج لندینگ با نکست',
         gif:'/assets/next.gif',
         png:'/assets/next.png',
-        link:'https://next-js-two-topaz.vercel.app/',
+        link:'https://next-js-kappa-sage.vercel.app',
         srcCode:'https://github.com/rumiani/next.js',
         textEn:'A landing page with Next.js.',
         textFa:'یک پیج استاتیک با Next.js'
