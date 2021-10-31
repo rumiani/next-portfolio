@@ -14,7 +14,7 @@ const Project = (props) => {
             <div className={classes.project} >
                     <div className={classes.picDiv} onClick = {()=>setplay(!play)}>
                         <Image src={play?props.gif:props.png}
-                            alt='Project pic' width='500px' height='300px'
+                            alt='Project pic' width='500px' height='400px'
                             className={`${classes.projectPic} ${play?classes.show:classes.hide}`}
                             title={t.playDemo}
                             id={props.id}
