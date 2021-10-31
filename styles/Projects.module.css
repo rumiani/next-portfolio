@@ -8,7 +8,7 @@
     width: fit-content;
     padding: 20px;
     font-size: 1rem;
-    box-shadow: 2px 3px 2px blue;
+    /* box-shadow: 2px 3px 2px black; */
     border-radius: 0 0 10px 10px;
     
 }

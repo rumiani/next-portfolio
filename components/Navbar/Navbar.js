@@ -33,9 +33,9 @@ useEffect(() =>{
             <nav className={classes.navbar}>
                     <div className={classes.logo}>
                     </div>
-                    <div className={classes.lang} onClick={changeLanguage}>
+                    <div className={classes.lang} onClick={changeLanguage} title={locale ==='en'?fa.language:en.language}>
                         <Image  src={locale ==='en'?fa.flag:en.flag} alt="flag" className={classes.flag}
-                        height='20px' width='40px' title={locale ==='en'?fa.language:en.language} /> 
+                        height='20px' width='40px'  /> 
                         &nbsp;{locale ==='en'?fa.lang:en.lang}
                     </div>
                     <div className={classes.menuIcon} onClick={mobileMenu}>
