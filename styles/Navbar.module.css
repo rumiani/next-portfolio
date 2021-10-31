@@ -19,12 +19,10 @@
     margin-left: 10%;
     transition: 1s;
     font-size: 20px;
-    /* padding: 20px; */
-
 }
 .lang:hover{
     cursor: pointer;
-    box-shadow: 2px 2px 2px 2px rgb(100, 255, 218);
+    /* box-shadow: 2px 2px 2px 2px rgb(100, 255, 218); */
     transform: scale(1.1);
 }
 .flag{
