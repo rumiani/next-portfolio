@@ -1,8 +1,7 @@
 import Project from "./Project/Project";
 import classes from '../../styles/Projects.module.css'
 import { useRouter } from "next/dist/client/router";
-
-import { ProjectsArr } from "../ArrData/projectsArr";
+import { ProjectsArr } from "./projectsArr/projectsArr";
 import { en } from "../../locals/en";
 import { fa } from "../../locals/fa";
 
