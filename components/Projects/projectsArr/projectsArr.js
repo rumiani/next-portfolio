@@ -4,11 +4,11 @@ export const ProjectsArr = [
         nameEn:'Simon',
         nameFa:'سایمون',
         gif:'/assets/simon.gif',
-        png:'/assets/simon.png',
-        link:'https://rumiani.github.io/my-simon-react/',
-        srcCode:'https://github.com/rumiani/my-simon-react',
-        textEn:'I used React & firebase to build a Full Stack memory game with sign up form and real time database.',    
-        textFa:'یک بازی حافظه با استفاده از ری اکت و فایربیس(فول استک) شامل فرم ثبت نام و نمایش بازیکنان و جدول امتیازات'
+        png:'/assets/simon.jpg',
+        link:'https://new-simon-rumiani.vercel.app/',
+        srcCode:'https://github.com/rumiani/new-simon',
+        textEn:'Full Stack Simon game - Next.js, context, firebase, tailwind CSS.',    
+        textFa:'یک بازی حافظه با استفاده از Next.js, context, firebase, tailwind CSS شامل فرم ثبت نام و نمایش بازیکنان و جدول امتیازات'
     },
     {   
         id:2,
