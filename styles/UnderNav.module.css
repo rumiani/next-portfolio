@@ -1,5 +1,4 @@
 .container {
-    /* height:270vh; */
     width: 100%;
     align-items: center;
     display: flex;
@@ -9,14 +8,11 @@
     background-size: cover;
   }
   
-  .intruduce{
-    /* background-color: red; */
-    width: 80%;
-    /* margin: 10px; */
-    height: 600px;
-    font-size: 20px;
-    font-size: 1.5 rem;
-  /* width: 70vw; */
+.intruduce{
+  width: 80%;
+  height: 600px;
+  font-size: 20px;
+  font-size: 1.5 rem;
   color: beige;
   font-weight:500;
   font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
@@ -53,16 +49,12 @@
   
 .about{
   width: 80%;
-  /* height: 70vh; */
   color: #8892b0;
   text-align: justify; 
-  /* background-color: green; */
   margin: 100px;
   color: beige;
 }
 .about p{
-/* width: 50%; */
-/* margin-left: 5vw; */
 font-size: 20px;
 font-weight:500;
 font-family: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
@@ -80,27 +72,14 @@ color: rgb(100, 255, 218);
   }
   .whoIAm{
     font-size: 14px;
-    /* width: 70vw;
-    font-size: 25px; */
-    /* margin-bottom: 30px; */
   }
   .intruduce{
     font-size: 18px;
-    /* width: 70%; */
-  }
-  .about{
-    /* height: 92vw; */
-    /* background-color: #8892b0; */
-  }
-  .about p{
-    /* width: 48vw; */
-    /* margin: 10px 0; */
   }
 }
 
 @media screen and (max-width: 768px) {
   .container{
-    /* height: 260vh; */
     font-size: 14px;
   }
   .whoIAm{

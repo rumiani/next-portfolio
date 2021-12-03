@@ -22,13 +22,22 @@ const UnderNav = () => {
                 return getElement.innerHTML = t.myNameIs;
             }
         }, 50);         
+
+        const el = document.querySelector('.containerPic')
+        el.addEventListener("mousemove", (e) => {
+            el.style.backgroundPositionX = -(0.1 * e.offsetX )+ "px";
+            // el.style.backgroundPositionY = -(0.02*e.offsetY )+ "px";
+          });
+
+
+
     },[])
 
 const whoIAmText = useRef()
 if(whoIAmText.current)whoIAmText.current.innerHTML = t.myNameIs
     
     return ( 
-        <div className={classes.container} id='#/top'>
+        <div className={`${classes.container} containerPic`} id='#/top'>
                 <div className={classes.intruduce}>
                     <p className={classes.whoIAm} ref={whoIAmText}
                         style={{textAlign:locale==='en'?'left':'right'}}>

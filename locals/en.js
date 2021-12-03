@@ -17,7 +17,7 @@ export const en = {
         I used to work as a webmaster and a tech support engineer in a web hosting company for 2+ years and now it has been
         a year working as a Front End web developer.
         Here are few technologies I've been working with recently:`,
-    skills:['React.js & Redux','Next.js','JavaScript (ES6+)','TypeScript','Git & GitHub','CSS3','HTML5'],
+    skills:['React.js & Redux','Next.js','JavaScript (ES6+)','TypeScript','Git & GitHub','CSS3 & Tailwind CSS','HTML5'],
     launch:'Click me to fly',
     myProjects:'Here are some of my projects:',
     playDemo:'Play the demo',
